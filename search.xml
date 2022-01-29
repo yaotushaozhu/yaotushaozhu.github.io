@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>re的奇妙冒险-1</title>
+      <link href="/2022/01/29/re-de-qi-miao-mou-xian-1/"/>
+      <url>/2022/01/29/re-de-qi-miao-mou-xian-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="从零开始的re…"><a href="#从零开始的re…" class="headerlink" title="从零开始的re…"></a>从零开始的re…</h1><h2 id="HDCTF2019-Maze1"><a href="#HDCTF2019-Maze1" class="headerlink" title="HDCTF2019]Maze1"></a>HDCTF2019]Maze1</h2><p><img src="/images/image-20220120122918722.png" alt="image-20220120122918722"></p><p>首先脱壳。upx壳。得到文件。</p><p><img src="/images/image-20220120123109472.png" alt="image-20220120123109472"></p><p>发现花指令，nop掉再反编译</p><p><img src="/images/image-20220129031059215.png" alt="image-20220129031059215"></p><p>发现为输入一个14字节字符串，用aswd进行移动，如果在第5列第-4排就继续。去查看字符串窗口，发现<img src="/images/image-20220129031842683.png" alt="image-20220129031842683"></p><p>一共70个字符，猜测7列10排。好像不太对，10列7排？<img src="/images/image-20220129032124503.png" alt="image-20220129032124503"></p><p>ssaaasaassdddw</p><h2 id="WUSTCTF2020-level2"><a href="#WUSTCTF2020-level2" class="headerlink" title="[WUSTCTF2020]level2"></a>[WUSTCTF2020]level2</h2><p>放进peid啥也没查出来，可能太老了？</p><p>换成exeinfope发现upx，-d</p><p>进去看字符串，<img src="/images/image-20220129045055438.png" alt="image-20220129045055438"></p><p>蚌</p><h2 id="Youngter-drive"><a href="#Youngter-drive" class="headerlink" title="Youngter-drive"></a>Youngter-drive</h2><p>upx -d</p><p>解出来看main</p><p><img src="/images/image-20220129051340297.png" alt="image-20220129051340297"></p><p>点进去看看</p><p><img src="/images/image-20220129051416314.png" alt="image-20220129051416314"></p><p>丑</p><p><img src="/images/image-20220129051554879.png" alt="image-20220129051554879"></p><p><img src="/images/image-20220129051944598.png" alt="image-20220129051944598"></p><p>emmm</p><p>函数后41112c然后dword_418008减少1然后睡眠0x64时间。查看，发现<img src="/images/image-20220129053726202.png" alt="image-20220129053726202"></p><p>也就是29</p><p>也就是一共30次</p><p>sub_41112C中,A-Z的话就变成a2+a1位-38，a-z就变成a2+a1位-96,再看看这个418000</p><p>QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm</p><p>再看看第二个<img src="/images/image-20220129054014803.png" alt="image-20220129054014803"></p><p>直接开摆（bushi）直接睡觉然后减1。</p><p>综合以上两个函数，猜测奇数位进行变换。</p><p>再看411190<img src="/images/image-20220129055308824.png" alt="image-20220129055308824"></p><p>和418004比。看下是TOiZiZtOrYaToUwPnToBsOaOapsyS</p><p>也就是大写字母变小写，小写字母变大写。所以反变换。(不过要往右移以为？管他呢直接+96和38)<img src="/images/image-20220129072247970.png" alt="image-20220129072247970"></p><p><img src="/images/image-20220129072305989.png" alt="image-20220129072305989"></p><p>不过这个好像只有29位，最后一位不知道哪里来。看答案是E。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ctf </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 逆向 </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> ctf </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何评价一天复习马原</title>
       <link href="/2021/12/27/ru-he-ping-jie-yi-tian-fu-xi-ma-yuan/"/>
       <url>/2021/12/27/ru-he-ping-jie-yi-tian-fu-xi-ma-yuan/</url>
